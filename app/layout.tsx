@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         title: "表現の自由.JP",
         description: "サイトの自由排除",
         images: {
-            url: "/NTJJP.png",
+            url: "/og.png",
         },
     },
 };
