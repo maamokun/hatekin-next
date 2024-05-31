@@ -208,10 +208,10 @@ export default function Home() {
                 </AlertDialogContent>
             </AlertDialog>
             <div
-            className="fixed z-50 bottom-10 left-10 py-5 px-2 border-2 bg-red-400 rounded-full cursor-pointer animate-bounce"
-            onClick={onOpen}
+                className="fixed z-50 bottom-10 left-10 py-5 px-2 border-2 bg-green-300 rounded-full cursor-pointer animate-bounce"
+                onClick={onOpen}
             >
-            メニュー
+                <GiJapan size={30} />
             </div>
             <Drawer
                 isOpen={isOpen}
@@ -225,7 +225,7 @@ export default function Home() {
                     <DrawerHeader>表現の自由.JP</DrawerHeader>
 
                     <DrawerBody>
-                        <p className="mb-1">v4.0.0</p>
+                        <p className="mb-1">v4.0.1</p>
                         <p className="mb-5">
                             開發時間の無駄遣いだなぁ、そうに決まってる
                         </p>
