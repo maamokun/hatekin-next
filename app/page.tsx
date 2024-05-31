@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Tabs } from "./components/tabs";
 import React from "react";
 import HatekinImage from "/assets/NTJJP.png";
-import { Fab, Action } from "react-tiny-fab";
 import { GiJapan } from "react-icons/gi";
 import { FaPlay, FaStop, FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/navigation";
