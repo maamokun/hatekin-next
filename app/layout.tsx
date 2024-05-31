@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import Head from "next/head";
-import { Inter } from "next/font/google";
+import { Sawarabi_Mincho } from "next/font/google";
+import { Providers } from "./providers";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const smincho = Sawarabi_Mincho({
+    subsets: ["latin"],
+    weight: "400",
+});
 
 export const metadata: Metadata = {
     openGraph: {
@@ -22,10 +25,14 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <Head>
-          <script async src="https://analytics.mikandev.tech/script.js" data-website-id="2f38dccd-3407-49e8-aca1-3559668ac012"></script>
-        </Head>
-            <body className={inter.className}>{children}</body>
+            <script
+                async
+                src="https://analytics.mikandev.tech/script.js"
+                data-website-id="2f38dccd-3407-49e8-aca1-3559668ac012"
+            ></script>
+            <body className={smincho.className}>
+                <Providers>{children} </Providers>
+            </body>
         </html>
     );
 }
