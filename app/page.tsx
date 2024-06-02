@@ -65,7 +65,9 @@ export default function Home() {
     };
 
     React.useEffect(() => {
-        setAudio(new Audio("/rap.mp3"));
+        const audio = new Audio("/rap.mp3");
+        audio.loop = true;
+        setAudio(audio);
         setClaim(new Audio("/claim.mp3"));
         updateToast();
     }, []);
@@ -225,7 +227,7 @@ export default function Home() {
                     <DrawerHeader>表現の自由.JP</DrawerHeader>
 
                     <DrawerBody>
-                        <p className="mb-1">v4.0.1</p>
+                        <p className="mb-1">v4.0.2</p>
                         <p className="mb-5">
                             開發時間の無駄遣いだなぁ、そうに決まってる
                         </p>
@@ -283,7 +285,11 @@ export default function Home() {
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
-            <Image src={HatekinImage} alt="表現の自由.JP" />
+            <Image
+                src={HatekinImage}
+                alt="表現の自由.JP"
+                className="absolute inset-x-0 mx-auto"
+            />
         </main>
     );
 }
