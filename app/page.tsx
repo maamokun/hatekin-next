@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Tabs } from "./components/tabs";
 import React from "react";
 import HatekinImage from "/assets/NTJJP.png";
 import { GiJapan } from "react-icons/gi";
@@ -250,6 +249,12 @@ export default function Home() {
                                 }
                             >
                                 統計の自由
+                            </Link>
+                            <Link
+                                className="mt-1"
+                                onClick={() => router.push("/moukon")}
+                            >
+                                毛根な時間！？bot
                             </Link>
                         </Flex>
                     </DrawerBody>
