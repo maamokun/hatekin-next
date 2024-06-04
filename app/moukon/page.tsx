@@ -32,7 +32,6 @@ export default function Home() {
     };
 
     const send = async () => {
-        setFormOpen(false);
         if (id.length < 1 || !file) {
             toast({
                 title: "すべての項目を入力してください。",
@@ -86,6 +85,7 @@ export default function Home() {
         );
 
         setIsSending(false);
+        setFormOpen(false);
         if (res.ok) {
             setMessage("");
             setMessageSent(true);
@@ -95,6 +95,9 @@ export default function Home() {
                 duration: 5000,
                 isClosable: true,
             });
+            setTimeout(() => {
+                router.push("/");
+            }, 3000);
         } else {
             toast({
                 title: "送信に失敗しました。",
@@ -102,6 +105,7 @@ export default function Home() {
                 duration: 5000,
                 isClosable: true,
             });
+            setFormOpen(true);
         }
     };
 
