@@ -39,8 +39,8 @@ import {
 } from "@chakra-ui/react";
 
 export default function Home() {
-    let [snackOpen, setSnackOpen] = React.useState<any>(true);
-    let [MessageSent, setMessageSent] = React.useState<any>(false);
+    const [snackOpen, setSnackOpen] = React.useState<any>(true);
+    const [MessageSent, setMessageSent] = React.useState<any>(false);
     const [message, setMessage] = React.useState<string>("");
     const [isSending, setIsSending] = React.useState(false);
     const [dialogOpen, setDialogOpen] = React.useState<boolean>(true);
@@ -226,7 +226,7 @@ export default function Home() {
                     <DrawerHeader>表現の自由.JP</DrawerHeader>
 
                     <DrawerBody>
-                        <p className="mb-1">v4.0.2</p>
+                        <p className="mb-1">v4.0.3</p>
                         <p className="mb-5">
                             開發時間の無駄遣いだなぁ、そうに決まってる
                         </p>
