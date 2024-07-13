@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import React from "react";
 import HatekinImage from "/assets/NTJJP.png";
 import { GiJapan } from "react-icons/gi";
 import { FaPlay, FaStop, FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Loading from "./components/spinner-mask";
+import { CardBody, CardContainer, CardItem } from "./components/3d-card";
 
 import {
     AlertDialog,
@@ -43,7 +45,7 @@ export default function Home() {
     const [MessageSent, setMessageSent] = React.useState<any>(false);
     const [message, setMessage] = React.useState<string>("");
     const [isSending, setIsSending] = React.useState(false);
-    const [dialogOpen, setDialogOpen] = React.useState<boolean>(true);
+    const [dialogOpen, setDialogOpen] = React.useState<boolean>(false);
     const [formOpen, setFormOpen] = React.useState<boolean>(false);
     const [audio, setAudio] = React.useState<HTMLAudioElement | null>(null);
     const [claim, setClaim] = React.useState<HTMLAudioElement | null>(null);
@@ -56,7 +58,7 @@ export default function Home() {
         toast({
             title: "アップデート完了！",
             description:
-                "表現の自由.JPがまたアップデートされてるんだけどﾅﾆｺﾚ？は？ﾁｮｯﾄﾏｯﾃﾁｮｯﾄﾏｯﾃ...",
+                "「ホームページが質素な気がします」という指摘が来たので、今本格的に開發しました。",
             status: "success",
             duration: 5000,
             isClosable: true,
@@ -208,6 +210,7 @@ export default function Home() {
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <div
                 className="fixed z-50 bottom-10 left-10 py-5 px-2 border-2 bg-green-300 rounded-full cursor-pointer animate-bounce"
                 onClick={onOpen}
@@ -290,11 +293,66 @@ export default function Home() {
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
-            <Image
-                src={HatekinImage}
-                alt="表現の自由.JP"
-                className="absolute inset-x-0 mx-auto"
-            />
+            <motion.div
+                initial={{ opacity: 0.0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    delay: 0.3,
+                    duration: 0.8,
+                    ease: "easeInOut",
+                }}
+                className="relative flex flex-col gap-4 items-center justify-center px-4 mt-10"
+                onAnimationComplete={() => setDialogOpen(true)}
+            >
+                <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+                    表現の自由.JP
+                </div>
+            </motion.div>
+            <CardContainer className="inter-var">
+                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                    <CardItem
+                        translateZ="50"
+                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                    >
+                        ブンブンハローYahoo!ニュースのコメント欄
+                    </CardItem>
+                    <CardItem
+                        as="p"
+                        translateZ="60"
+                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                    >
+                        どうもヘイトキンです。
+                    </CardItem>
+                    <CardItem
+                        translateZ="100"
+                        rotateX={20}
+                        rotateZ={-10}
+                        className="w-full mt-4"
+                    >
+                        <Image
+                            src={HatekinImage.src}
+                            height="1000"
+                            width="1000"
+                            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                            alt="thumbnail"
+                        />
+                    </CardItem>
+                    <div className="flex justify-between items-center mt-20">
+                        <CardItem
+                            translateZ={20}
+                            translateX={40}
+                            as="button"
+                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                            onClick={onOpen}
+                        >
+                            メインメニュー
+                        </CardItem>
+                    </div>
+                </CardBody>
+            </CardContainer>
+            <div className="text-2xl md:text-2xl font-bold dark:text-white text-center animate-bounce">
+                開發時間の無駄遣いだなぁ、そうに決まってる
+            </div>
         </main>
     );
 }
