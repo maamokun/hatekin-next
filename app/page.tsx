@@ -229,7 +229,7 @@ export default function Home() {
                     <DrawerHeader>表現の自由.JP</DrawerHeader>
 
                     <DrawerBody>
-                        <p className="mb-1">v4.0.3</p>
+                        <p className="mb-1">v4.0.5</p>
                         <p className="mb-5">
                             開發時間の無駄遣いだなぁ、そうに決まってる
                         </p>
