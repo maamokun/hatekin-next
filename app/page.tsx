@@ -212,7 +212,7 @@ export default function Home() {
             </AlertDialog>
             {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <div
-                className="fixed z-50 bottom-10 left-10 py-5 px-2 border-2 bg-green-300 rounded-full cursor-pointer animate-bounce"
+                className="fixed z-50 bottom-10 left-10 py-5 px-2 border-2 bg-green-300 rounded-full cursor-pointer"
                 onClick={onOpen}
             >
                 <GiJapan size={30} />
