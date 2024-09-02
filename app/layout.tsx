@@ -26,9 +26,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <script
-                async
+                defer
                 src="https://analytics.mikandev.tech/script.js"
-                data-website-id="2f38dccd-3407-49e8-aca1-3559668ac012"
+                data-website-id="91df8a6b-c58f-4864-a609-0f4267acf2ba"
             ></script>
             <body className={smincho.className}>
                 <Providers>{children} </Providers>

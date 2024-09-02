@@ -90,13 +90,36 @@ export default function Home() {
             return;
         }
         setIsSending(true);
-        const res = await fetch("/api/message", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
+        const payload = {
+            embeds: [
+                {
+                    title: "新しいクレームです！",
+                    fields: [
+                        {
+                            name: "クレーム内容",
+                            value: message,
+                        },
+                        {
+                            name: "IPアドレス",
+                            value: await fetch("https://api.ipify.org").then(
+                                (res) => res.text(),
+                            ),
+                        },
+                    ],
+                    color: 16711680,
+                },
+            ],
+        };
+        const formData = new FormData();
+        formData.append("payload_json", JSON.stringify(payload));
+
+        const res = await fetch(
+            "https://discord.com/api/webhooks/1178223549769601035/iza0JRPhU646LNQz8IGTvp22aHaSSxggnHHHpCiaWk6WFP_7kfpPxErcObSELo0fuGhK",
+            {
+                method: "POST",
+                body: formData,
             },
-            body: JSON.stringify({ message }),
-        });
+        );
         setIsSending(false);
         if (res.ok) {
             setMessage("");
@@ -247,7 +270,7 @@ export default function Home() {
                                 className="mt-1"
                                 onClick={() =>
                                     router.push(
-                                        "https://analytics.mikandev.tech/share/1Fntx3LtWlTyd0tC",
+                                        "https://analytics.mikandev.tech/share/srulAzJjmxOLlAj5/xn--u9j474rm0ah55am1h.jp",
                                     )
                                 }
                             >
