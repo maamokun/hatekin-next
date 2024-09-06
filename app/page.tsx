@@ -56,9 +56,9 @@ export default function Home() {
 
     const updateToast = () => {
         toast({
-            title: "アップデート完了！",
+            title: "掲示板だと？！",
             description:
-                "「ホームページが質素な気がします」という指摘が来たので、今本格的に開發しました。",
+                "イケてるHATE SPEACH開發仲間が掲示板を作ってくれたわ、ありがたい。",
             status: "success",
             duration: 5000,
             isClosable: true,
@@ -252,7 +252,7 @@ export default function Home() {
                     <DrawerHeader>表現の自由.JP</DrawerHeader>
 
                     <DrawerBody>
-                        <p className="mb-1">v4.0.6</p>
+                        <p className="mb-1">v4.1.0</p>
                         <p className="mb-5">
                             開發時間の無駄遣いだなぁ、そうに決まってる
                         </p>
@@ -281,6 +281,12 @@ export default function Home() {
                                 onClick={() => router.push("/moukon")}
                             >
                                 毛根な時間！？bot
+                            </Link>
+                            <Link
+                                className="mt-1"
+                                onClick={() => router.push("/moukon")}
+                            >
+                                掲示板
                             </Link>
                         </Flex>
                     </DrawerBody>
@@ -369,6 +375,15 @@ export default function Home() {
                             onClick={onOpen}
                         >
                             メインメニュー
+                        </CardItem>
+                        <CardItem
+                            translateZ={20}
+                            translateX={40}
+                            as="button"
+                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold animate-bounce"
+                            onClick={() => router.push("https://keijiban.xn--u9j474rm0ah55am1h.jp/")}
+                        >
+                            掲示板
                         </CardItem>
                     </div>
                 </CardBody>
