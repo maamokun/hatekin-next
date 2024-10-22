@@ -10,7 +10,7 @@
         "format": "biome format --write ."
     },
     "dependencies": {
-        "@chakra-ui/react": "^2.8.2",
+        "@chakra-ui/react": "^3.0.0",
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.5",
         "@types/formidable": "^3.4.5",
