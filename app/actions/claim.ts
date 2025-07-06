@@ -8,9 +8,9 @@ export async function sendMessage(
 ): Promise<string> {
   const headerList = await headers();
   const ip =
+    headerList.get('cf-connecting-ip') ||
     headerList.get('x-forwarded-for') ||
     headerList.get('x-real-ip') ||
-    headerList.get('cf-connecting-ip') ||
     'unknown';
 
   if (!message || message.length < 1) {
