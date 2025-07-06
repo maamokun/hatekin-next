@@ -56,7 +56,7 @@ export async function sendMessage(
     body: formData,
   });
 
-  if (!response.ok) {
+  if (!response.status || response.status !== 204) {
     const errorText = await response.text();
     console.error('Discord webhook error:', errorText);
     return 'メッセージの送信に失敗しました。';
