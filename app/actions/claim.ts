@@ -8,10 +8,10 @@ export async function sendMessage(
 ): Promise<string> {
   const headerList = await headers();
   const ip =
-      headerList.get('x-forwarded-for') ||
-      headerList.get('x-real-ip') ||
-      headerList.get('cf-connecting-ip') ||
-      'unknown';
+    headerList.get('x-forwarded-for') ||
+    headerList.get('x-real-ip') ||
+    headerList.get('cf-connecting-ip') ||
+    'unknown';
 
   if (!message || message.length < 1) {
     return 'メッセージを入力してください。';
@@ -44,7 +44,7 @@ export async function sendMessage(
             value: ip,
           },
         ],
-        color: 16711680,
+        color: 16_711_680,
       },
     ],
   };
@@ -64,6 +64,3 @@ export async function sendMessage(
 
   return response.json();
 }
-
-
-

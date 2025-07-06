@@ -2,7 +2,7 @@
 import { Turnstile } from 'next-turnstile';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
-import { sendMessage } from "@/app/actions/claim";
+import { sendMessage } from '@/app/actions/claim';
 
 export default function Page() {
   const [claim, setClaim] = useState<HTMLAudioElement>();
@@ -30,7 +30,7 @@ export default function Page() {
     }
 
     try {
-      await sendMessage(message, key)
+      await sendMessage(message, key);
     } catch (err) {
       return toast.error('メッセージを送信できませんでした。');
     }
