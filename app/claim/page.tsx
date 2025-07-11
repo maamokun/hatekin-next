@@ -31,6 +31,8 @@ export default function Page() {
 
     try {
       await sendMessage(message, key);
+      toast.success('メッセージを送信しました！');
+      setMessage('');
     } catch (err) {
       return toast.error('メッセージを送信できませんでした。');
     }
