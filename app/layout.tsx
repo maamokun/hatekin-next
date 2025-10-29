@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
-import { Sawarabi_Mincho } from 'next/font/google';
-import { Toaster } from 'sonner';
+import type { Metadata } from "next";
+import { Sawarabi_Mincho } from "next/font/google";
+import { Toaster } from "sonner";
 
-import './globals.css';
+import "./globals.css";
 
 const smincho = Sawarabi_Mincho({
-  subsets: ['latin'],
-  weight: '400',
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
   openGraph: {
-    title: '表現の自由.JP',
-    description: 'サイトの自由排除',
+    title: "表現の自由.JP",
+    description: "サイトの自由排除",
     images: {
-      url: 'https://表現の自由.jp/og.png',
+      url: "https://表現の自由.jp/og.png",
     },
   },
 };
