@@ -68,7 +68,7 @@ export default function RootLayout({
           <FaChartPie />
           <span className={"dock-label"}>アクセス解析</span>
         </a>
-        <span className={"text-center text-black text-sm"}>v5.0.1</span>
+        <span className={"text-center text-black text-sm"}>v5.0.2</span>
       </div>
     </>
   );
