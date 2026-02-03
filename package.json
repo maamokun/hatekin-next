@@ -24,7 +24,7 @@
     "react-icons": "^5.5.0",
     "sharp": "^0.34.4",
     "sonner": "^2.0.7",
-    "swetrix": "^3.7.1",
+    "swetrix": "^4.1.0",
     "tailwind-merge": "^3.0.0"
   },
   "devDependencies": {

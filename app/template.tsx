@@ -20,6 +20,8 @@ export default function RootLayout({
     apiURL: "https://analytics.mikandev.com/backend/v1/log",
   });
 
+  Swetrix.trackViews();
+
   useEffect(() => {
     console.log("Next.jsだ、ありがたい。");
     console.log(

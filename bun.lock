@@ -14,7 +14,7 @@
         "react-icons": "^5.5.0",
         "sharp": "^0.34.4",
         "sonner": "^2.0.7",
-        "swetrix": "^3.7.1",
+        "swetrix": "^4.1.0",
         "tailwind-merge": "^3.0.0",
       },
       "devDependencies": {
@@ -1390,7 +1390,7 @@
 
     "supports-preserve-symlinks-flag": ["supports-preserve-symlinks-flag@1.0.0", "", {}, "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="],
 
-    "swetrix": ["swetrix@3.7.1", "", {}, "sha512-ftISRhIhZmpEP5RUaHezCUj4UwlbcMq5xekjbbm2TLQum0H5DuI6iyAajSqU5+3XRBhVKdZS1CU1a93J+7EDBQ=="],
+    "swetrix": ["swetrix@4.1.0", "", {}, "sha512-TPOr14oYBt3LquPfWqBjRP6IhbQ+WOiz8ticORRvg4gECb3loFbHB455OUWcpXPCTaFi/E9s5TVgxgqIX+viHQ=="],
 
     "tailwind-merge": ["tailwind-merge@3.3.1", "", {}, "sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g=="],
 
