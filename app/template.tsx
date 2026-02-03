@@ -16,8 +16,8 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  Swetrix.init("CcOQZfpnwHZ2", {
-    apiURL: "https://analytics.mikandev.tech/log",
+  Swetrix.init("RXbdG7bnmqUY", {
+    apiURL: "https://analytics.mikandev.com/backend/v1/log",
   });
 
   useEffect(() => {
@@ -61,14 +61,14 @@ export default function RootLayout({
           <span className={"dock-label"}>毛根な時間！？bot</span>
         </Link>
         <a
-          href={"https://analytics.mikandev.com/projects/CcOQZfpnwHZ2"}
+          href={"https://analytics.mikandev.com/projects/RXbdG7bnmqUY"}
           rel="noopener noreferrer"
           target="_blank"
         >
           <FaChartPie />
           <span className={"dock-label"}>アクセス解析</span>
         </a>
-        <span className={"text-center text-black text-sm"}>v5.0.2</span>
+        <span className={"text-center text-black text-sm"}>v5.0.3</span>
       </div>
     </>
   );
