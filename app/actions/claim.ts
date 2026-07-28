@@ -2,10 +2,7 @@
 import { headers } from "next/headers";
 import { validateTurnstileToken } from "next-turnstile";
 
-export async function sendMessage(
-  message: string,
-  token: string,
-): Promise<string> {
+export async function sendMessage(message: string, token: string): Promise<string> {
   const headerList = await headers();
   const ip =
     headerList.get("cf-connecting-ip") ||

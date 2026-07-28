@@ -3,7 +3,6 @@ import { Turnstile } from "next-turnstile";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { sendMessage } from "@/app/actions/claim";
-import * as Swetrix from "swetrix";
 
 export default function Page() {
   const [claim, setClaim] = useState<HTMLAudioElement>();
@@ -20,7 +19,6 @@ export default function Page() {
   const [key, setKey] = useState<string>();
 
   const send = async () => {
-    Swetrix.track({ ev: "claimSubmit" });
     if (!key) return;
     if (!message || message.length < 1) {
       okashiidaro?.play();
@@ -57,11 +55,7 @@ export default function Page() {
           value={message}
         />
         <div className="mt-3 flex flex-row items-center justify-center px-2">
-          <button
-            className={"btn btn-primary w-full"}
-            disabled={!key}
-            onClick={send}
-          >
+          <button className={"btn btn-primary w-full"} disabled={!key} onClick={send}>
             {!key && <span className="loading loading-spinner mr-2" />}
             送信
           </button>
