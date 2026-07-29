@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FaChartPie />
           <span className={"dock-label"}>アクセス解析</span>
         </a>
-        <span className={"text-center text-black text-sm"}>v5.1.0</span>
+        <span className={"text-center text-black text-sm"}>v5.1.1</span>
       </div>
     </>
   );

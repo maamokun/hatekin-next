@@ -1,16 +1,21 @@
 "use client";
+import { Howl } from "howler";
 import { Turnstile } from "next-turnstile";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { sendMessage } from "@/app/actions/claim";
 
 export default function Page() {
-  const [claim, setClaim] = useState<HTMLAudioElement>();
-  const [okashiidaro, setOkashiidaro] = useState<HTMLAudioElement>();
+  const [claim, setClaim] = useState<Howl>();
+  const [okashiidaro, setOkashiidaro] = useState<Howl>();
 
   useEffect(() => {
-    const claim = new Audio("/audio/claim.mp3");
-    const okashiidaro = new Audio("/audio/okashiidaro.mp3");
+    const claim = new Howl({
+      src: ["https://cdn.mikn.dev/web/Hatekin/audio/claim.mp3"],
+    });
+    const okashiidaro = new Howl({
+      src: ["https://cdn.mikn.dev/web/Hatekin/audio/okashiidaro.mp3"],
+    });
     setClaim(claim);
     setOkashiidaro(okashiidaro);
   }, []);
