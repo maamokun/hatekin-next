@@ -8,6 +8,11 @@ import { BsEmojiSunglasses } from "react-icons/bs";
 import { FaChartPie, FaCode } from "react-icons/fa";
 import { changeLog } from "@/app/changelog/page";
 import claimkin from "@/assets/claimkin.png";
+import { Howl } from "howler";
+
+const hatekineveryday = new Howl({
+  src: ["https://cdn.mikn.dev/web/Hatekin/audio/hatekineveryday.mp3"],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -26,7 +31,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <>
       {children}
       <div className={"dock"}>
-        <Link className={pathname === "/" ? "dock-active" : ""} href={"/"}>
+        <Link
+          className={pathname === "/" ? "dock-active" : ""}
+          href={"/"}
+          onClick={() => hatekineveryday.play()}
+        >
           <BsEmojiSunglasses />
           <span className={"dock-label"}>ホームページ</span>
         </Link>

@@ -8,9 +8,11 @@ import { sendMessage } from "@/app/actions/claim";
 const claim = new Howl({
   src: ["https://cdn.mikn.dev/web/Hatekin/audio/claim.mp3"],
 });
+
 const okashiidaro = new Howl({
   src: ["https://cdn.mikn.dev/web/Hatekin/audio/okashiidaro.mp3"],
 });
+
 const yabee = new Howl({
   src: ["https://cdn.mikn.dev/web/Hatekin/audio/yabee.mp3"],
 });

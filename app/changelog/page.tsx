@@ -5,6 +5,10 @@ interface logEntry {
 
 export const changeLog: logEntry[] = [
   {
+    version: "v5.1.5（2026/08/08）",
+    changes: ["効果音2つ追加！"],
+  },
+  {
     version: "v5.1.4（2026/08/08）",
     changes: ["このページを作った。"],
   },
