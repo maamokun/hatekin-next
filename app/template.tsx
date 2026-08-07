@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { BsEmojiSunglasses } from "react-icons/bs";
-import { FaChartPie } from "react-icons/fa";
+import { FaChartPie, FaCode } from "react-icons/fa";
 import claimkin from "@/assets/claimkin.png";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -40,6 +40,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FaChartPie />
           <span className={"dock-label"}>アクセス解析</span>
         </a>
+        <Link className={pathname === "/changelog" ? "dock-active" : ""} href={"/changelog"}>
+          <FaCode />
+          <span className={"dock-label"}>変更ログ</span>
+        </Link>
         <span className={"text-center text-black text-sm"}>v5.1.3</span>
       </div>
     </>

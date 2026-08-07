@@ -11,10 +11,8 @@ const smincho = Sawarabi_Mincho({
 });
 
 export const metadata: Metadata = {
-  openGraph: {
-    title: "表現の自由.com",
-    description: "ドメイン復活来た〜来た！！！来たぁ...",
-  },
+  title: "表現の自由.com",
+  description: "ドメイン復活来た〜来た！！！来たぁ...",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
