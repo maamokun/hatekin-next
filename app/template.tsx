@@ -6,10 +6,12 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { BsEmojiSunglasses } from "react-icons/bs";
 import { FaChartPie, FaCode } from "react-icons/fa";
+import { changeLog } from "@/app/changelog/page";
 import claimkin from "@/assets/claimkin.png";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const version = changeLog[0].version.split("（")[0];
 
   useEffect(() => {
     console.log("Next.jsだ、ありがたい。");
@@ -44,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FaCode />
           <span className={"dock-label"}>変更ログ</span>
         </Link>
-        <span className={"text-center text-black text-sm"}>v5.1.3</span>
+        <span className={"text-center text-black text-sm"}>{version}</span>
       </div>
     </>
   );

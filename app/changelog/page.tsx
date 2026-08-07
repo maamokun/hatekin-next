@@ -3,7 +3,7 @@ interface logEntry {
   changes: string[];
 }
 
-const changeLog: logEntry[] = [
+export const changeLog: logEntry[] = [
   {
     version: "v5.1.4（2026/08/08）",
     changes: ["このページを作った。"],
