@@ -59,5 +59,5 @@ export async function sendMessage(message: string, token: string): Promise<strin
     return "メッセージの送信に失敗しました。";
   }
 
-  return response.json();
+  return "メッセージを送信しました。";
 }
